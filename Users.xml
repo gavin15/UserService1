@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Users xmlns="http://xml.netbeans.org/schema/userXmlSchema">
+    <user>
+        <userName>Gavin</userName>
+        <password>password</password>
+        <currency>INR</currency>
+        <amount>1000.0</amount>
+        <shares>
+            <companyName>TestCompany</companyName>
+            <companySymbol>TC</companySymbol>
+            <sharesPurchased>1</sharesPurchased>
+            <share_price>
+                <value>100.0</value>
+                <last_update>11-03-2016</last_update>
+            </share_price>
+        </shares>
+    </user>
+    <user>
+        <userName>Gavin12</userName>
+        <password>password</password>
+        <currency>INR1</currency>
+        <amount>1000.0</amount>
+        <shares>
+            <companyName>TestCompany</companyName>
+            <companySymbol>TC</companySymbol>
+            <sharesPurchased>1</sharesPurchased>
+            <share_price>
+                <value>100.0</value>
+                <last_update>11-03-2016</last_update>
+            </share_price>
+        </shares>
+    </user>
+</Users>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://xml.netbeans.org/schema/userXmlSchema"
+    xmlns:tns="http://xml.netbeans.org/schema/userXmlSchema"
+    elementFormDefault="qualified">
+<xsd:complexType name="priceType">
+        <xsd:sequence>
+            <xsd:element name="value" type="xsd:float"></xsd:element>
+            <xsd:element name="last_update" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="companyType">
+        <xsd:sequence>
+            <xsd:element name="companyName" type="xsd:string"/>
+            <xsd:element name="companySymbol" type="xsd:string"></xsd:element>
+            <xsd:element name="sharesPurchased" type="xsd:int"/>
+                       <xsd:sequence >
+                <xsd:element name="share_price" type="tns:priceType" minOccurs="1" maxOccurs="1"/>
+            </xsd:sequence>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="userType">
+        <xsd:sequence>
+            <xsd:element name="userName" type="xsd:string"/>
+            <xsd:element name="password" type="xsd:string"/>
+            <xsd:element name="currency" type="xsd:string"></xsd:element>
+            <xsd:element name="amount" type="xsd:float"/>
+                       <xsd:sequence >
+                <xsd:element name="shares" type="tns:companyType" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="Users">
+        <xsd:complexType>
+            <xsd:sequence >
+                <xsd:element name="user" type="tns:userType" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
