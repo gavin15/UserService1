@@ -16,18 +16,19 @@
         </shares>
     </user>
     <user>
-        <userName>Gavin12</userName>
+        <userName>GavinTest</userName>
         <password>password</password>
-        <currency>INR1</currency>
-        <amount>1000.0</amount>
+        <currency>GBP</currency>
+        <amount>517.85596</amount>
         <shares>
             <companyName>TestCompany</companyName>
             <companySymbol>TC</companySymbol>
-            <sharesPurchased>1</sharesPurchased>
-            <share_price>
-                <value>100.0</value>
-                <last_update>11-03-2016</last_update>
-            </share_price>
+            <sharesPurchased>5</sharesPurchased>
+        </shares>
+        <shares>
+            <companyName>TestCompany1</companyName>
+            <companySymbol>TC1</companySymbol>
+            <sharesPurchased>3</sharesPurchased>
         </shares>
     </user>
 </Users>

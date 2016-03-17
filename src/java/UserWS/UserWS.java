@@ -302,7 +302,7 @@ public class UserWS {
         try {
             javax.xml.bind.JAXBContext jaxbCtx = javax.xml.bind.JAXBContext.newInstance(users.getClass().getPackage().getName());
             javax.xml.bind.Unmarshaller unmarshaller = jaxbCtx.createUnmarshaller();
-            users = (Users) unmarshaller.unmarshal(new java.io.File("File path")); //NOI18N
+            users = (Users) unmarshaller.unmarshal(new java.io.File("Users.xml")); //NOI18N
         } catch (javax.xml.bind.JAXBException ex) {
             // XXXTODO Handle exception
             java.util.logging.Logger.getLogger("global").log(java.util.logging.Level.SEVERE, null, ex); //NOI18N
@@ -311,9 +311,9 @@ public class UserWS {
         // Check for the requested user in the list. If found, return true; else false.
         for (int i = 0; i < users.getUser().size(); i++) {
             if (users.getUser().get(i).getUserName().equalsIgnoreCase(userName.trim())) {
-                return true;
+                return false;
             }
         }
-        return false;
+        return true;
     }
 }
